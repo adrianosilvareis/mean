@@ -1,0 +1,59 @@
+<div class="jumbotron">
+  <form class="clearfix">
+    <div class="col-md-12">
+      <h1>Contato <span ng-if="contato._id">#{{contato._id}}</span></h1>
+
+      <div class="alert alert-danger" ng-if=errormessage>
+        {{errormessage}}
+      </div>
+
+      <div class="col-md-12">
+        <div class="col-md-4">
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon">Primeiro nome</span>
+              <input type="text" class="form-control" id="nome" placeholder="Ex. Adriano" ng-model="contato.nome">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon">Sobrenome</span>
+              <input type="text" class="form-control" id="Sobrenome" placeholder="Ex. Silva dos Reis" ng-model="contato.sobrenome">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <div class="col-md-10">
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon">@</span>
+              <input type="email" class="form-control" id="email" placeholder="adriano@email.com" ng-model="contato.email">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon">Idade</span>
+              <input type="text" class="form-control" id="Idade" placeholder="Ex. 27" ng-model="contato.idade">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="emergencia">Emergência</label>
+        <select id="emergencia" class="form-control" ng-model="contato.emergencia" ng-options="contato._id as contato.nome for contato in contatos">
+          <option value="">contato de emergencia</option>
+        </select>
+      </div>
+
+      <button type="button" name="button" class="btn btn-block btn-success" ng-click="salvar()">SALVAR</button>
+      <a href="#!/contatos" class="btn btn-block btn-default">VOLTAR</a>
+    </div>
+  </form>
+</div>
