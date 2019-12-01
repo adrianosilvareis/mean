@@ -20,7 +20,7 @@
     "method-override": "^2.3.8",
     "mongo-sanitize": "^1.0.0",
     "mongodb": "^2.2.26",
-    "mongoose": "^4.9.6",
+    "mongoose": "^5.7.13",
     "mongoose-findorcreate": "^1.0.1",
     "passport": "^0.3.2",
     "passport-github": "^1.1.0"
